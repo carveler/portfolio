@@ -8,6 +8,7 @@
 }
 body {
   min-height: 100vh;
+  max-width: 80vh;
 }
 a {
   color: black;

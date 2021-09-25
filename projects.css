@@ -5,6 +5,7 @@
   list-style: none;
   text-decoration: none;
   font-family: sans-serif;
+  transform: scale(0.99);
 }
 body {
   min-height: 100vh;

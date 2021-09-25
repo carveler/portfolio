@@ -1,0 +1,379 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: sans-serif;
+}
+body {
+  min-height: 100vh;
+}
+a {
+  color: black;
+}
+main {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+/* ----------------header--------------- */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  padding: 3vw;
+  width: 100%;
+}
+.name {
+  display: flex;
+  flex-direction: column;
+  padding: 0.44rem;
+  cursor: pointer;
+}
+.name h1 {
+  font-size: 2.3rem;
+}
+
+.name p {
+  font-size: 1.6rem;
+}
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navigation {
+  opacity: 0;
+  color: #4d4d4d;
+  font-weight: 200;
+}
+.navigation-list {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 2rem;
+  flex: 1 0 0;
+}
+.navigation-list li {
+  padding: 1rem;
+}
+.icon {
+  opacity: 0;
+  font-size: 2rem;
+  color: black;
+  cursor: pointer;
+}
+.icon-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-list li {
+  padding: 1rem;
+}
+
+.fab {
+  color: black;
+  font-size: 1rem;
+}
+
+/* ------------------------hamburger-menu---------------------- */
+
+@media (max-width: 767px) {
+  .name h1 {
+    font-size: 1.5rem;
+  }
+  .name p {
+    font-size: 1.2rem;
+  }
+
+  .nav-hamberger {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(175, 197, 209, 0.9);
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+  }
+  .nav-hamberger ul {
+    list-style: none;
+  }
+  .nav-hamberger li {
+    margin-bottom: 3rem;
+    font-size: 1.5rem;
+  }
+
+  .icon {
+    opacity: 0;
+    font-size: 2rem;
+    color: #ffffff;
+    cursor: pointer;
+  }
+  #navbtn {
+    width: 28px;
+    height: 15px;
+    position: fixed;
+    right: 15px;
+    padding: 0;
+    outline: none;
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+  .hamberger-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+#navbtn::before,
+#navbtn::after {
+  content: '';
+  display: block;
+  height: 1px;
+  background-color: #080808;
+  transform: translateY(10px);
+  transition: 0.3s ease-in-out;
+}
+
+#navbtn::before {
+  transform: translateY(-10px);
+  box-shadow: 0 10px #080808;
+}
+
+.open #navbtn {
+  z-index: 100;
+}
+.open #navbtn::before {
+  transform: rotate(-45deg);
+  box-shadow: none;
+}
+.open #navbtn::after {
+  transform: rotate(45deg);
+  box-shadow: none;
+  color: #ffffff;
+}
+.open .nav-hamberger {
+  visibility: visible;
+  opacity: 1;
+  z-index: 100;
+}
+
+@media (min-width: 768px) {
+  #navbtn {
+    display: none;
+  }
+  header {
+    display: flex;
+    align-items: center;
+  }
+  .nav-hamberger {
+    margin-left: auto;
+  }
+  .nav-hamberger ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+  }
+
+  .nav-hamberger ul li a {
+    color: #000000;
+  }
+  .nav-hamberger li {
+    margin-left: 3rem;
+    font-size: 1.6rem;
+  }
+}
+/* --------hamberger-end---------------------- */
+/* ----------------text----------------- */
+p {
+  margin-bottom: 1rem;
+}
+.text-container {
+  width: auto;
+  margin: 4vw;
+}
+
+.text-container h1 {
+  padding: 1rem;
+  /* border: 1px solid red; */
+  font-size: 2rem;
+}
+
+.description-cointainer {
+  /* border: 1px solid red; */
+  padding: 1rem;
+  text-align: left;
+}
+.description-cointainer h4 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+.description-cointainer p {
+  font-size: 1rem;
+}
+.description {
+  margin-bottom: 1rem;
+}
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+button {
+  border: none;
+  cursor: pointer;
+  padding: 1rem;
+  margin: 3rem 0 3rem 0;
+  border-radius: 2rem;
+  font-size: 1rem;
+  color: aliceblue;
+  background-color: rgb(0, 0, 0);
+}
+button a {
+  color: aliceblue;
+}
+button i.fab {
+  color: aliceblue;
+  margin-left: 0.5rem;
+}
+
+/* ----------------image----------------- */
+.bingo img {
+  height: 700px;
+}
+.img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.img-container img {
+  height: 800px;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+/* ----------pagination------ */
+.pagination-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 2rem;
+  margin: 1rem 1rem;
+}
+
+.pagination-container a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: inherit;
+  cursor: pointer;
+}
+
+.pagination-container i {
+  margin: 1rem;
+}
+.gif {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.gif img {
+  margin-bottom: 1rem;
+}
+
+/* ----------pagination-first------  */
+.pagination-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.pagination-container-first {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 1rem;
+  margin: 1rem 3rem;
+}
+
+.pagination-container-first a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: inherit;
+  cursor: pointer;
+}
+h3 {
+  font-size: 1rem;
+}
+i {
+  font-size: 1rem;
+}
+
+.pagination-container-first i {
+  margin: 1rem;
+}
+/* ----------pagination-first-end------  */
+@media (min-width: 769px) {
+  .fab {
+    font-size: 1.5rem;
+  }
+
+  .text-container h1 {
+    font-size: 3rem;
+  }
+  .description-cointainer h4 {
+    font-size: 2.5rem;
+  }
+  .description-cointainer p {
+    font-size: 1.5rem;
+  }
+  .gif {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  h3 {
+    font-size: 2rem;
+  }
+  i {
+    font-size: 2rem;
+  }
+  .button-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  button {
+    font-size: 1.5rem;
+    margin-right: 2rem;
+    padding: 1.5rem;
+  }
+  button i.fab {
+    color: aliceblue;
+    margin-left: 0.5rem;
+    font-size: 1.5rem;
+  }
+  .gif img {
+    margin-right: 3rem;
+  }
+}

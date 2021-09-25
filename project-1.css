@@ -251,9 +251,7 @@ button i.fab {
 }
 
 /* ----------------image----------------- */
-.bingo img {
-  height: 700px;
-}
+
 .img-container {
   display: flex;
   justify-content: center;
@@ -375,5 +373,8 @@ i {
   }
   .gif img {
     margin-right: 3rem;
+  }
+  .bingo img {
+    height: 700px;
   }
 }

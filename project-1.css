@@ -16,7 +16,9 @@ main {
   max-width: 100%;
   overflow: hidden;
 }
-
+.weight {
+  font-weight: 600;
+}
 /* ----------------header--------------- */
 header {
   display: flex;
@@ -250,6 +252,10 @@ button i.fab {
   margin-left: 0.5rem;
 }
 
+.description a {
+  color: rgb(101, 156, 228);
+}
+
 /* ----------------image----------------- */
 
 .img-container {
@@ -352,6 +358,10 @@ i {
     align-items: center;
     flex-wrap: wrap;
   }
+  .gif.top img {
+    margin: 1rem;
+    padding: 2rem;
+  }
   h3 {
     font-size: 2rem;
   }
@@ -378,5 +388,11 @@ i {
   }
   .bingo img {
     height: 600px;
+  }
+  .tech-flex {
+    display: flex;
+  }
+  .tech-flex div {
+    margin: 4rem;
   }
 }

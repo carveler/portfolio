@@ -5,7 +5,6 @@
   list-style: none;
   text-decoration: none;
   font-family: sans-serif;
-  transform: scale(0.99);
 }
 body {
   min-height: 100vh;
@@ -81,6 +80,10 @@ header {
 }
 .img-container img {
   height: 450px;
+}
+h1 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
 }
 /* ------------------------hamburger-menu---------------------- */
 
@@ -201,11 +204,7 @@ header {
 }
 /* --------hamberger-end---------------------- */
 /* ----------------photo------------------ */
-.img-container.bingo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
 .project-container {
   width: 100%;
   padding: 3vw;
@@ -229,7 +228,7 @@ img {
   cursor: pointer;
 }
 .project h1 {
-  font-size: 5rem;
+  font-size: 3rem;
   font-weight: 700;
   color: azure;
   text-shadow: 1px 1px 1px black;
@@ -249,5 +248,17 @@ img {
 @media (min-width: 769px) {
   .flex-container {
     flex-direction: row;
+  }
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  .gif {
+    height: 380px;
+  }
+  .gif.bingo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }

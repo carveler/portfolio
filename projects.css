@@ -204,11 +204,7 @@ h1 {
 }
 /* --------hamberger-end---------------------- */
 /* ----------------photo------------------ */
-.img-container.bingo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
 .project-container {
   width: 100%;
   padding: 3vw;
@@ -232,7 +228,7 @@ img {
   cursor: pointer;
 }
 .project h1 {
-  font-size: 5rem;
+  font-size: 3rem;
   font-weight: 700;
   color: azure;
   text-shadow: 1px 1px 1px black;
@@ -256,5 +252,13 @@ img {
   h1 {
     font-size: 2rem;
     margin-bottom: 2rem;
+  }
+  .gif {
+    height: 380px;
+  }
+  .gif.bingo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
